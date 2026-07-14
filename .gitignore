@@ -4,10 +4,13 @@ coverage/
 playwright-report/
 test-results/
 blob-report/
-artifacts/
+artifacts/runs/
 .env
 .env.*
 !.env.example
 *.log
 .DS_Store
 Thumbs.db
+.next/
+next-env.d.ts
+*.tsbuildinfo
