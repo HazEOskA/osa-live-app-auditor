@@ -1,0 +1,7 @@
+{
+  "node": "v22.22.2",
+  "playwright": "1.56.1",
+  "os": "linux",
+  "arch": "x64",
+  "mode": "demo"
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>QA Auditor Fixture App</title>
+</head>
+<body>
+  <h1>QA Auditor Fixture App</h1>
+
+  <section>
+    <button id="working-button" onclick="document.getElementById('revealed-panel').hidden = false;">
+      Reveal panel
+    </button>
+    <div id="revealed-panel" hidden>This panel appeared because the button works.</div>
+  </section>
+
+  <section>
+    <button id="dead-button">Do nothing</button>
+  </section>
+
+  <section>
+    <img id="broken-image" src="/nonexistent-image.png" alt="A broken image" />
+  </section>
+
+  <section>
+    <a id="dead-link" href="/does-not-exist">Broken link</a>
+    <a id="safe-link" href="/page2.html">Go to page 2</a>
+  </section>
+
+  <script>
+    console.error("Fixture: deliberate console error for QA auditor testing");
+    fetch("http://127.0.0.1:1/impossible").catch(() => {});
+  </script>
+</body>
+</html>

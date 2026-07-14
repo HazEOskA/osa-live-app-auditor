@@ -1,0 +1,37 @@
+{
+  "failedRequests": [
+    {
+      "url": "http://127.0.0.1:1/impossible",
+      "method": "GET",
+      "failureText": "net::ERR_UNSAFE_PORT",
+      "pageUrl": "http://127.0.0.1:4322/",
+      "timestamp": "2026-07-14T23:45:33.144Z"
+    }
+  ],
+  "httpErrors": [
+    {
+      "url": "http://127.0.0.1:4322/nonexistent-image.png",
+      "method": "GET",
+      "status": 404,
+      "statusText": "Not Found",
+      "pageUrl": "http://127.0.0.1:4322/",
+      "timestamp": "2026-07-14T23:45:33.151Z"
+    }
+  ],
+  "deadLinkChecks": [
+    {
+      "href": "http://127.0.0.1:4322/does-not-exist",
+      "selector": "#dead-link",
+      "status": 404,
+      "pageUrl": "http://127.0.0.1:4322/",
+      "timestamp": "2026-07-14T23:45:33.770Z"
+    },
+    {
+      "href": "http://127.0.0.1:4322/page2.html",
+      "selector": "#safe-link",
+      "status": 200,
+      "pageUrl": "http://127.0.0.1:4322/",
+      "timestamp": "2026-07-14T23:45:33.781Z"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "run-2026-07-14T23-45-32-999Z-eb0fd3",
+  "target": {
+    "requestedUrl": "http://127.0.0.1:4322",
+    "normalizedUrl": "http://127.0.0.1:4322/",
+    "host": "127.0.0.1",
+    "protocol": "http:"
+  },
+  "startedAt": "2026-07-14T23:45:33.000Z",
+  "completedAt": "2026-07-14T23:45:35.240Z",
+  "status": "COMPLETED",
+  "environment": {
+    "node": "v22.22.2",
+    "playwright": "1.56.1",
+    "os": "linux",
+    "arch": "x64",
+    "mode": "demo"
+  },
+  "executedChecks": [
+    "console-error-check",
+    "runtime-error-check",
+    "network-failure-check",
+    "broken-image-check",
+    "dead-link-check",
+    "dead-control-check",
+    "accessibility-name-check",
+    "system-limits-check",
+    "dead-link-request-check",
+    "broken-image-scan"
+  ],
+  "eventCount": 30,
+  "findingCount": 8,
+  "evidence": [
+    {
+      "path": "audit-report.json",
+      "sha256": "daee2f6e981345762213e1d1fd6fdc51da60b5b254dcd0c2a0dababb86cef4e3",
+      "bytes": 6507,
+      "contentType": "application/json"
+    },
+    {
+      "path": "events.jsonl",
+      "sha256": "f77996ed66db7df155616177997180b5829ec2dc4ce62248761d407e2f82f96c",
+      "bytes": 6553,
+      "contentType": "application/x-ndjson"
+    },
+    {
+      "path": "findings/findings.json",
+      "sha256": "b5d8b4b87352332c9281bdd49b0538b32a9eb39b07e7e0555c41359dfd017d60",
+      "bytes": 5219,
+      "contentType": "application/json"
+    },
+    {
+      "path": "logs/console.json",
+      "sha256": "dfab8bbca9f9900d92771c89322453920aab2e0a2e20e7303fe4792ba3155eee",
+      "bytes": 731,
+      "contentType": "application/json"
+    },
+    {
+      "path": "logs/network.json",
+      "sha256": "72c8e89f9f3a47024d669f927f99cbf77f51059d4f8d84e0819448c7db266b55",
+      "bytes": 945,
+      "contentType": "application/json"
+    },
+    {
+      "path": "logs/runtime.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "contentType": "application/json"
+    },
+    {
+      "path": "metadata/environment.json",
+      "sha256": "50024a5f2a1c2b93551754fb84eae910df960b236f21a754b350c746a36616d9",
+      "bytes": 102,
+      "contentType": "application/json"
+    },
+    {
+      "path": "metadata/target.json",
+      "sha256": "aafc5230212441eee83189a7e7e9a05de56a7a933db890d0a2f4b0956d17342c",
+      "bytes": 136,
+      "contentType": "application/json"
+    },
+    {
+      "path": "screenshots/action-1-after.png",
+      "sha256": "305aca7a5b99bbb7bfae80a94a16bb53a5ec3a653c5f7240ed7d5d700b550e50",
+      "bytes": 21337,
+      "contentType": "image/png"
+    },
+    {
+      "path": "screenshots/action-1-before.png",
+      "sha256": "0bb29290345d7cab5e94d06261ff913ccc7a4e6d8d3f9849858fa3cfef05868a",
+      "bytes": 17749,
+      "contentType": "image/png"
+    },
+    {
+      "path": "screenshots/action-2-after.png",
+      "sha256": "106c30cc23ccc96c11a03580e068cee9131279433522daf638e5474aa052e1d2",
+      "bytes": 21363,
+      "contentType": "image/png"
+    },
+    {
+      "path": "screenshots/action-2-before.png",
+      "sha256": "305aca7a5b99bbb7bfae80a94a16bb53a5ec3a653c5f7240ed7d5d700b550e50",
+      "bytes": 21337,
+      "contentType": "image/png"
+    },
+    {
+      "path": "screenshots/initial.png",
+      "sha256": "f6f9a8c24bd8bbba69c478adf602c6c400aac2d594913e9823fd327fc63fd0db",
+      "bytes": 17745,
+      "contentType": "image/png"
+    }
+  ],
+  "eventStreamHash": "c4abad3acadadd3e0ced2f768451c62c569dded85ab119d539f33e7482412777",
+  "rootHash": "49c271af058b821ff374420f5bfc1ee7bd76cff4564840531818a6c572c8613b",
+  "verification": {
+    "instructions": "Run the independent validator against this file. It re-reads every evidence file from disk, recomputes each SHA-256 hash, recomputes the event stream hash and the root hash, and exits non-zero if anything was modified, added, missing, or path-unsafe.",
+    "command": "npm run verify -- artifacts/runs/run-2026-07-14T23-45-32-999Z-eb0fd3/proof-bundle.json"
+  }
+}

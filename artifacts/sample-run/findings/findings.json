@@ -1,0 +1,154 @@
+[
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f001",
+    "category": "console-error",
+    "severity": "medium",
+    "title": "Console error logged during audit",
+    "description": "Fixture: deliberate console error for QA auditor testing",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "selector": "http://127.0.0.1:4322/",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Observe the browser DevTools console during and after page load."
+    ],
+    "evidenceRefs": [
+      "logs/console.json"
+    ],
+    "timestamp": "2026-07-14T23:45:33.142Z",
+    "confidence": 1,
+    "checkId": "console-error-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f002",
+    "category": "console-error",
+    "severity": "medium",
+    "title": "Console error logged during audit",
+    "description": "Failed to load resource: net::ERR_UNSAFE_PORT",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "selector": "http://127.0.0.1:1/impossible",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Observe the browser DevTools console during and after page load."
+    ],
+    "evidenceRefs": [
+      "logs/console.json"
+    ],
+    "timestamp": "2026-07-14T23:45:33.144Z",
+    "confidence": 1,
+    "checkId": "console-error-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f003",
+    "category": "console-error",
+    "severity": "medium",
+    "title": "Console error logged during audit",
+    "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "selector": "http://127.0.0.1:4322/nonexistent-image.png",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Observe the browser DevTools console during and after page load."
+    ],
+    "evidenceRefs": [
+      "logs/console.json"
+    ],
+    "timestamp": "2026-07-14T23:45:33.151Z",
+    "confidence": 1,
+    "checkId": "console-error-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f004",
+    "category": "failed-request",
+    "severity": "high",
+    "title": "Network request failed to complete",
+    "description": "GET http://127.0.0.1:1/impossible failed: net::ERR_UNSAFE_PORT",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Observe the network request to http://127.0.0.1:1/impossible"
+    ],
+    "evidenceRefs": [
+      "logs/network.json"
+    ],
+    "timestamp": "2026-07-14T23:45:33.144Z",
+    "confidence": 1,
+    "checkId": "network-failure-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f005",
+    "category": "http-error",
+    "severity": "medium",
+    "title": "Server responded with HTTP 404",
+    "description": "GET http://127.0.0.1:4322/nonexistent-image.png returned 404 Not Found",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Observe the response for http://127.0.0.1:4322/nonexistent-image.png"
+    ],
+    "evidenceRefs": [
+      "logs/network.json"
+    ],
+    "timestamp": "2026-07-14T23:45:33.151Z",
+    "confidence": 1,
+    "checkId": "network-failure-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f006",
+    "category": "broken-image",
+    "severity": "low",
+    "title": "Image failed to load",
+    "description": "Image with source \"http://127.0.0.1:4322/nonexistent-image.png\" reported zero natural width after loading completed.",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "selector": "#broken-image",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Inspect image element #broken-image"
+    ],
+    "evidenceRefs": [
+      "screenshots/initial.png"
+    ],
+    "timestamp": "2026-07-14T23:45:33.701Z",
+    "confidence": 0.9,
+    "checkId": "broken-image-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f007",
+    "category": "dead-link",
+    "severity": "medium",
+    "title": "Link returns HTTP 404",
+    "description": "Requesting \"http://127.0.0.1:4322/does-not-exist\" returned HTTP 404.",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "selector": "#dead-link",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Follow the link at #dead-link (http://127.0.0.1:4322/does-not-exist)"
+    ],
+    "evidenceRefs": [
+      "logs/network.json"
+    ],
+    "timestamp": "2026-07-14T23:45:33.770Z",
+    "confidence": 1,
+    "checkId": "dead-link-check"
+  },
+  {
+    "id": "run-2026-07-14T23-45-32-999Z-eb0fd3-f008",
+    "category": "dead-control",
+    "severity": "medium",
+    "title": "Interactive control produced no observable effect",
+    "description": "Element \"Do nothing\" (#dead-button) was clicked but no DOM mutation, navigation or dialog was observed.",
+    "pageUrl": "http://127.0.0.1:4322/",
+    "selector": "#dead-button",
+    "reproductionSteps": [
+      "Open http://127.0.0.1:4322/",
+      "Click element #dead-button (\"Do nothing\")",
+      "Observe that no DOM change, navigation or dialog results."
+    ],
+    "evidenceRefs": [
+      "screenshots/action-2-before.png",
+      "screenshots/action-2-after.png"
+    ],
+    "timestamp": "2026-07-14T23:45:35.189Z",
+    "confidence": 0.85,
+    "checkId": "dead-control-check"
+  }
+]
