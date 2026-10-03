@@ -64,3 +64,7 @@ Do not commit generated evidence, private preview URLs, credentials or customer 
 ## Status
 
 `ARCHITECTURE LOCKED / IMPLEMENTATION NOT STARTED`
+
+## Related app
+
+- [`client-website-audit-desk/`](client-website-audit-desk/) — Client Website Audit Desk v0.1 with ScoutBot (separate product; see its README and `ARCHITECTURE_LOCK_v0.2.md`).
